@@ -1,0 +1,184 @@
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    background-color: #2C3253;
+    padding: 18px 0;
+    z-index: 5;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 22px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 20px;
+}
+
+.sticky-header a {
+    text-decoration: none;
+    color: #EFEFEF;
+    cursor: pointer;
+    margin-right: 20px; 
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2C3253;
+    padding: 20px;
+    color: #FFFFFF;
+    width: 720px;
+    height: 540px;
+    z-index: 1001;
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+body {
+    margin: 0;
+    background: url('berkeleycampus.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    background-color: #fff;
+    color: #444;
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 0px);
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    background-color: rgb(224, 224, 224);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+
+.box.a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    animation-delay: 0.4s;
+}
+
+.box.b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    animation-delay: 0.8s;
+}
+
+.box.c {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    animation-delay: 1.2s;
+}
+
+.box.d {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    animation-delay: 1.6s;
+}
+
+.box.e {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    animation-delay: 2.2s;
+}
+
+.box.f {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    animation-delay: 2.6s;
+}
+
+.box.g {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    animation-delay: 3.2s;
+}
+
+.box.h {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    animation-delay: 3.6s;
+}
+
+.box.i {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    animation-delay: 4.0s;
+}
+
+.dark-blue {
+    color: #004080; 
+    font-family: 'Mulish', sans-serif;
+}
+
+.box.a, .box.b, .box.c, .box.d, .box.e, .box.f, .box.g, .box.h, .box.i {
+    color: rgb(83, 83, 83); 
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.image-container {
+    grid-column: span 3; 
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.image-container img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
